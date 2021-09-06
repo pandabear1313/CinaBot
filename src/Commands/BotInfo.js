@@ -6,7 +6,7 @@ const Discord = require("discord.js");
 
 module.exports = new Command({
 	name: "Botinfo",
-	description: "Shows an embed",
+	description: "This commands shows the Botinfo and All the hard-working developers who created it",
 	permission: "SEND_MESSAGES",
 	async run(message, args, client) {
 		const embed = new Discord.MessageEmbed();
