@@ -5,7 +5,7 @@ const Discord = require("discord.js");
 module.exports = new Command({
   name: "collect",
   description: "Bot would collect inputed messages and outputs the message but in an embed",
-  permission: "SEND_MESSAGES",
+  permission: "ADMINISTRATOR",
   async run(message, args, client) {
 
     const logChannel = client.channels.cache.get("788512538588479501");
