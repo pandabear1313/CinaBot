@@ -10,10 +10,6 @@ module.exports = new Command({
 	name: "userinfo",
 	description: "Bot would Show a user profile",
 	permission: "SEND_MESSAGES",
-	aliases: [
-        'userinfo', 
-        'whois'
-	],
 
 	async run(message, args, client) {
 		
