@@ -17,8 +17,9 @@ let user =
 
         const embed = new Discord.MessageEmbed();
         embed.setAuthor(`${user.user.username} you are fired`, user.user.displayAvatarURL())
-            .setColor("RANDOM")
-            .setImage("https://c.tenor.com/aHv5-YfU-rgAAAAM/fired-office.gif");
+            .setColor("#00FF1E")
+            .setImage("https://c.tenor.com/aHv5-YfU-rgAAAAM/fired-office.gif")
+
             message.channel.send({ embeds: [embed] });
     }
 });
