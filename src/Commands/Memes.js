@@ -26,7 +26,7 @@ module.exports = new Command({
                 embed.setTitle(`${memeTitle}`)
                 embed.setURL(`${memeUrl}`)
                 embed.setImage(memeImage)
-                embed.setColor('GREEN')
+                embed.setColor('RANDOM')
                 embed.setFooter(`👍 ${memeUpvotes} 👎 ${memeDownvotes} 💬 ${memeNumComments}`)
                 message.reply({embeds: [embed]})
             })
