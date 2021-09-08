@@ -1,8 +1,8 @@
 {
-	"name": "tutorial-bot",
+	"name": "CinaBot",
 	"version": "1.0.0",
 	"main": "src/index.js",
-	"author": "Ferotiq",
+	"author": "Cina",
 	"license": "ISC",
 	"description": "",
 	"dependencies": {
