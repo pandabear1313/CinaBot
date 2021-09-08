@@ -21,7 +21,7 @@ client.on('ready', () => {
     const activities = [
     `Your Every Move`,
     ];
-    client.user.setActivity(`${activities[i++ % activities.length]}`, { type: 'WATCHING' })}, 10000  )
+    client.user.setActivity(`${activities[i++ % activities.length]}`, { type: 'WATCHING' })}, 10000000  )
    
 
 });
