@@ -4,19 +4,29 @@ const Command = require("../Structures/Command.js");
 
 const Discord = require("discord.js");
 
+const{client, message, MessageEmbed } = require("discord.js");
+
+const { pagination } = require("reconlx");
+
+
 module.exports = new Command({
 	name: "helpinfo",
 	description: "More adv. help command",
 	permission: "SEND_MESSAGES",
-	async run(message, args, client, bot) {
+	run: async(message, args, client,) => {
+
+        const embed1 = new MessageEmbed().setTitle('one').setFooter('test')
+        const embed2 = new MessageEmbed().setTitle('two')
+
+        const embeds = [embed1, embed2];
+    
 	
-        const Help = new Discord.MessageEmbed()
-        .addFields([
-            {name: "field 1", value: "some value", inline: true},
-            {name: "blabla", value: "e", inline: true}
-            ])
+        pagination({
+            embeds : embeds,
 
+            message : message,
 
-            message.channel.send({ embeds: [Help] });
+            time: 4000,
+        })
 	}
 });
