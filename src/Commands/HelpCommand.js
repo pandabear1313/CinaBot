@@ -27,18 +27,18 @@ module.exports = new Command({
         {
 
            name: 'Informations',
-           value: '`ping` | `collect` |`userinfo` | `Botinfo`',
+           value: '`ping` | `collect` |`userinfo` | `Botinfo` | `uptime`',
 
         },
         {
 
             name: 'Fun',
-            value: '`meme` | `fire` | `say` | `status` | `hello`'
+            value: '`meme` | `fire` | `say` | `status` | `hello` | `waifu`'
         },
         {
 
             name: 'Moderation',
-            value: '`clear` | `Others Still In Development`'
+            value: '`clear` |  `uptime` | `Others Still In Development` '
         }
 
         )
