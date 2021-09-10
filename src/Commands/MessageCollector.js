@@ -5,12 +5,12 @@ const Discord = require("discord.js");
 module.exports = new Command({
   name: "collect",
   description: "Bot would collect inputed messages and outputs the message but in an embed",
-  permission: "ADMINISTRATOR",
+  permission: "SEND_MESSAGES",
   async run(message, args, client) {
 
-    const logChannel = client.channels.cache.get("788512538588479501");
+    const logChannel = client.channels.cache.get("713675042143076356");
 
-    message.channel.send(":white_check_mark: Your next message will be embedded and sent to");
+    message.channel.send(":white_check_mark: Your next message will be embedded");
 
     let filter = m => !m.author.bot;
 
