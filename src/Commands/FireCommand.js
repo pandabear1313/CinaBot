@@ -7,7 +7,7 @@ const Discord = require("discord.js");
 module.exports = new Command({
     name: "fire",
     description: "This is a fun command to troll your friend and Staff-members sending an attachment saying that the user is fired ",
-    permission: "MANAGE_MESSAGES",
+    permission: "SEND_MESSAGES",
 
     async run(message, args, client) {
 let user =
