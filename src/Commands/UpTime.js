@@ -18,7 +18,7 @@ module.exports = new Command({
   let uptime = new Discord.MessageEmbed()
 
     .setColor("#fc6203")
-    .setDescription(` \`\💻\`\ | **__Uptime:__**`) // remind me to remove this emoji 
+    .setDescription("<a:bot_dev:885708376602972242> | **__Uptime:__**") // remind me to remove this emoji 
     .addField("**Days:**", `${days}`)
     .addField("** Hours: **" , `${hours}`) 
     .addField("** Minutes: **", `${minutes}`) 
