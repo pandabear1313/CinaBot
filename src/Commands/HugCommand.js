@@ -5,12 +5,12 @@ const { MessageEmbed } = require('discord.js');
 const Command = require("../Structures/Command.js");
 
 module.exports = new Command({
-    name: "cat",
-    description: "This command would send random pictures of cats aswell as send a fun-fact about them", // you have to download the axios package 
+    name: "hug",
+    description: "This command sends a animated gif hugging the user you pinged aswell as hug you aswell if you're feeling down", // !hug <user> 
     permission: "SEND_MESSAGES",
     async run(message, args, client) {
-        const url = "https://some-random-api.ml/img/cat";
-        const facts = "https://some-random-api.ml/facts/cat"
+        const url = "https://some-random-api.ml/animu/hug";
+        const facts = "https://some-random-api.ml/facts/dog"
 
         let image, response;
         let fact, responses;
@@ -18,17 +18,17 @@ module.exports = new Command({
             response = await axios.get(url);
             image = response.data;
 
-            responses = await axios.get(facts)
-            fact = responses.data
-
         } catch (e) {
             return message.channel.send(`An error occured, please try again!`)
         }
+        let user =
+            message.mentions.members.first() ||
+            message.guild.members.cache.get(args[0]) ||
+            message.member;
 
         const embed = new MessageEmbed()
-            .setTitle(`Random Cat Image and Fact`)
+            .setAuthor(`${message.author.username} Hugged ${user.user.username}`, user.user.displayAvatarURL())
             .setColor(`RANDOM`)
-            .setDescription(fact.fact)
             .setImage(image.link)
 
         await message.channel.send({ embeds: [embed] })

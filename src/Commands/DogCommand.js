@@ -6,7 +6,7 @@ const Command = require("../Structures/Command.js");
 
 module.exports = new Command({
     name: "dog",
-    description: "",
+    description: "This command would send random pictures of dog aswell as send a fun-fact about them", // also uses axios package 
     permission: "SEND_MESSAGES",
     async run(message, args, client) {
         const url = "https://some-random-api.ml/img/dog";

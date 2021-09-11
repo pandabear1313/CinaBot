@@ -6,7 +6,7 @@ const Discord = require("discord.js");
 
 module.exports = new Command({
 	name: "shutdown",
-	description: "This command would shut down the bot ",
+	description: "This command would shuts down the bot ",
 	permission: "SEND_MESSAGES",
 	async run(message, args, client) {
 
