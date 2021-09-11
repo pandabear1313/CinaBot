@@ -26,4 +26,4 @@ client.on('ready', () => {
 
 });
 
-client.start(process.env.token);
+client.start(config.token);
