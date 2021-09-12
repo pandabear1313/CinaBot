@@ -33,7 +33,8 @@ module.exports = new Command({
         {
 
             name: 'Fun',
-            value: '`meme` | `fire` | `say` | `status` | `hello`'
+            value: '`meme` | `fire` | `say` | `status` | `hello`  \n\n `hug`  | `pat`  | `ttc`  | `dog`  | `cat`'
+                    
         },
         {
 
