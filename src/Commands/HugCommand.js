@@ -27,7 +27,7 @@ module.exports = new Command({
             message.member;
 
         const embed = new MessageEmbed()
-            .setAuthor(`${message.author.username} Hugged ${user.user.username}`, user.user.displayAvatarURL())
+            .setAuthor(`${message.author.username} Hugged ${user.user.username}`, message.author.displayAvatarURL())
             .setColor(`RANDOM`)
             .setImage(image.link)
 
