@@ -13,7 +13,6 @@ module.exports = new Command({
         const facts = "https://some-random-api.ml/facts/dog"
 
         let image, response;
-        let fact, responses;
         try {
             response = await axios.get(url);
             image = response.data;
