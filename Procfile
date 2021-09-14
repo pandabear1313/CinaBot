@@ -1,3 +1,3 @@
-worker: node.js CINABOT
+worker: node ./index.js
 
 
