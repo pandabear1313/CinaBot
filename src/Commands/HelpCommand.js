@@ -26,7 +26,7 @@ module.exports = new Command({
         },
         {
 
-           name: 'Informations',
+           name: `Informations`,
            value: '`ping` | `collect` |`userinfo` | `Botinfo` | `uptime`',
 
         },
