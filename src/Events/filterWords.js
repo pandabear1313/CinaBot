@@ -7,7 +7,7 @@ module.exports = new Event("messageCreate", (client, message) => {
 
     words.forEach(async word => {
         if (message.content === word) {
-            await message.channel.send(`<@${message.author.id}> You can't just say: **__${word}__** come one!`).then(msg => {
+            await message.channel.send(`<@${message.author.id}> <:bot_mod:887130116273094656> You can't just say: **__${word}__** come one!`).then(msg => {
                 setTimeout(() => {
                     msg.delete();
                 }, 10000)

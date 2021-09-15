@@ -15,5 +15,6 @@ module.exports = new Event("messageCreate", (client, message) => {
               console.log(err);
               message.channel.send("There aren't any results, sorry :( .")
           })
-    } //for a specific channel
-});
+    }
+}); //for a specific channel
+   
