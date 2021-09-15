@@ -2861,5 +2861,10 @@ exports.words = [
   "zipperheads",
   "zoophile",
   "zoophilia",
+  "fuc",
+  "porn",
+  "ph",
+  "cum",
+  "@Cinna#0130",
   "🖕"
 ]
