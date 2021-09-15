@@ -7,20 +7,25 @@ const Discord = require("discord.js");
 const fetch = require("node-fetch");
 
 module.exports = new Command({
-    name: "waifu",
+    name: "wave",
     description: "",
     permission: "SEND_MESSAGES",
     async run(message, args, client) {
 
-        fetch("https://api.waifu.pics/sfw/waifu")
+        let user =
+        message.mentions.members.first() ||
+        message.guild.members.cache.get(args[0]) ||
+        message.member;
+        
+        fetch("https://api.waifu.pics/sfw/wave")
         .then(res => res.json())
         .then(res => {
             const embed = new Discord.MessageEmbed()
-            .setAuthor(`${message.author.username} Here's your Waifu`, message.author.displayAvatarURL())
+            .setAuthor(`${message.author.username} waves at ${user.user.username}`, message.author.displayAvatarURL())
             .setColor(`RANDOM`)
             .setImage(res.url)
 
-            message.channel.send({embeds:[embed]}) 
+            message.channel.send({embeds:[embed]})
 
             
         });
