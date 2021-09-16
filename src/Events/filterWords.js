@@ -5,18 +5,19 @@ const { words } = require("../Data/words");
 module.exports = new Event("messageCreate", (client, message) => {
     if (message.author.bot) return;
 
-    words.forEach(async word => {
-        if (message.content === word) {
-            await message.channel.send(`<@${message.author.id}> <:bot_mod:887130116273094656> You can't just say: **__${word}__** come one!`).then(msg => {
-                setTimeout(() => {
-                    msg.delete();
-                }, 10000)
+    if (message.member.permissions.has("ADMINISTRATOR")) return;
 
-                setTimeout(() => {
-                    message.delete();
-                }, 1000);
-            });
-            
-        }
-    })
-});
+    const sentence = message.content.toLowerCase().split(' ');
+    const stringWord = sentence.join(' ');
+    const word = (element) => sentence.includes(element);
+
+    if (words.some(word)) {
+        message.delete();
+        message.channel.send(`<@${message.author.id}> <:bot_mod:887130116273094656> You can't just say: **__${stringWord}__** come on!`).then(msg => {
+            setTimeout(() => {
+                msg.delete();
+            }, 10000)
+        });
+    }
+});   
+
