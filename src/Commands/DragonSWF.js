@@ -22,5 +22,16 @@ module.exports = new Command({
 
             message.channel.send({embeds: [embed]});
         });
+
+        const embed4 = new Discord.MessageEmbed()
+            .setTitle('NSFW not allowed here')
+            .setDescription(
+                'Use NSFW commands in a NSFW marked channel (look in channel settings, dummy)'
+            )
+            .setImage('https://i.imgur.com/oe4iK5i.gif')
+        if (!message.channel.nsfw) return message.channel.send({embeds: [embed4]});
+        
+
+
     }
 });
