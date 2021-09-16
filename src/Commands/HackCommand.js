@@ -100,7 +100,7 @@ let names = [
 ]
 
 
-module.exports = Command({
+module.exports = new Command({
   name: "hack",
   description: "hack a user",
   run: async (client, message, args) => {
