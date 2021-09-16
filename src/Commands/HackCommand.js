@@ -2,6 +2,13 @@ const Discord = require("discord.js");
 
 const Command = require("../Structures/Command.js");
 
+
+module.exports = new Command({
+    name: "hack",
+    description: "hack a user",
+    async run(message, args, client) {
+
+        
 let ips = [
   '14.621.152.163.87.5',
   '96.492.139.149.12.8',
@@ -99,11 +106,6 @@ let names = [
 'Peter'
 ]
 
-
-module.exports = new Command({
-  name: "hack",
-  description: "hack a user",
-  run: async (client, message, args) => {
 
  const email = emails[Math.floor(Math.random() * emails.length)];
 
