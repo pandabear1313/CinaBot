@@ -3,7 +3,7 @@ const Command = require("../Structures/Command.js");
 const Discord = require("discord.js");
 
 module.exports = new Command({
-  name: "collect",
+  name: "embed",
   description: "Bot would collect inputed messages and outputs the message but in an embed",
   permission: "SEND_MESSAGES",
   async run(message, args, client) {

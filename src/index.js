@@ -8,7 +8,6 @@ const config = require("./Data/config.json");
 
 const client = new Client();
 
-
 client.on('ready', () => {
     process.setMaxListeners(0);
     console.log(`Client: Ready`);
@@ -22,8 +21,9 @@ client.on('ready', () => {
     `Your Every Move`,
     ];
     client.user.setActivity(`${activities[i++ % activities.length]}`, { type: 'WATCHING' })}, 10000000  )
-   
 
+
+    
 });
 
 client.start(config.token);

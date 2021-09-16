@@ -9,10 +9,12 @@ module.exports = new Command({
         permission: "SEND_MESSAGES",
         async run(message, args, client) {
 
-            const msg = await message.channel.send(args.slice(1).join(" "));
+            const sayContent = args.slice(1).join(" ");
 
-            message.delete(); 
-         
-        }
+            if (!sayContent || !args[1])/* <--- both works*/ return message.channel.send(`${message.author.username} Send a message to let me say something! ;)`);
 
-    });
+            const msg = await message.channel.send(sayContent);
+
+            message.delete();    
+        }                                                  
+    });  
