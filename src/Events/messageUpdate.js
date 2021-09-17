@@ -7,7 +7,7 @@ const Discord = require('discord.js');
 
 module.exports = new Event("messageUpdate", (client, oldMessage, newMessage) => {
 
-  const logChannel = oldMessage.guild.channels.cache.find(chnl => chnl.name === "dumb-logs");
+  const logChannel = oldMessage.guild.channels.cache.find(chnl => chnl.name === "mod-logs");
   if (!logChannel) return;   // noice, whats next?  the chat filter it doesn't remove the  swear words in sentences
 
 try {

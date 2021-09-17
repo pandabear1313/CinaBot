@@ -5,7 +5,7 @@ const { words } = require("../Data/words");
 module.exports = new Event("messageCreate", (client, message) => {
     if (message.author.bot) return;
 
-    if (message.member.permissions.has("ADMINISTRATOR")) return;
+    if (message.member.permissions.has("MANAGE_CHANNELS")) return;
 
     const sentence = message.content.toLowerCase().split(' ');
     const stringWord = sentence.join(' ');

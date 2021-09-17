@@ -11,7 +11,7 @@ module.exports = new Command({
 
             const sayContent = args.slice(1).join(" ");
 
-            if (!sayContent || !args[1])/* <--- both works*/ return message.channel.send(`${message.author.username} Send a message to let me say something! ;)`);
+            if (!sayContent || !args[1])/* <--- both works*/ return message.channel.send(`<@${message.author.id}> Send a message to let me say something`);
 
             const msg = await message.channel.send(sayContent);
 
