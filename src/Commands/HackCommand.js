@@ -178,7 +178,7 @@ const prompt = await message.channel.send(`Hacking ${user ? hacked.username : ha
     await wait(5000);
    await prompt.edit(`${user.username}'s credit card number : ${cci}`);
     await wait(5000);
-    await prompt.edit(`Viewing Broswer.....`);
+    await prompt.edit(`Viewing Broswer History.....`);
     await wait(5000);
     await prompt.edit(`I found **${tree}** while searching his history`);
     await wait(5000);
