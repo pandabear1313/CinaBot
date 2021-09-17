@@ -104,7 +104,7 @@ let passwords = [
     'y5GUBu1R4a2vEMg',
     ];
 
-let trees = [
+let Broswers = [
    'Nsfw imagies',
    'furry imagies',
    'How to sex online',
@@ -123,13 +123,23 @@ let trees = [
    'Cringe Tiktok Dances'
 ];
 
+let words = [
+  'lol',
+  'lmao',
+  'ok',
+  'ofc',
+  'bro',
+];
+
 const email = emails[Math.floor(Math.random() * emails.length)];
 
 const password = passwords[Math.floor(Math.random() * passwords.length)];
 
 const ip = ips[Math.floor(Math.random() * ips.length)];
 
-const tree = trees[Math.floor(Math.random() * passwords.length)];
+const Broswer = Broswers[Math.floor(Math.random() * Broswers.length)];
+
+const word = words[Math.floor(Math.random() * words.length)];
 
 const cci = ccis[Math.floor(Math.random() * ccis.length)];
 
@@ -167,7 +177,7 @@ const prompt = await message.channel.send(`Hacking ${user ? hacked.username : ha
      await  wait(3700);
      await  prompt.edit('Fetching dms');
      await  wait(3700);
-     await prompt.edit('Listing most common words...');
+     await prompt.edit(`Listing most common words... **${words}**`);
      await  wait(2700);
      await  prompt.edit(`Injecting virus into discriminator #${hacked.discriminator}`);
     await  wait(3700);
@@ -180,7 +190,7 @@ const prompt = await message.channel.send(`Hacking ${user ? hacked.username : ha
     await wait(5000);
     await prompt.edit(`Viewing Broswer History.....`);
     await wait(5000);
-    await prompt.edit(`I found **${tree}** while searching his history`);
+    await prompt.edit(`I found **${Broswer}** while searching his history`);
     await wait(5000);
    await  prompt.edit('Spamming email...');
    await wait(6700);
