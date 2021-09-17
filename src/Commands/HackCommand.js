@@ -184,7 +184,7 @@ const prompt = await message.channel.send(`Hacking ${user ? hacked.username : ha
     await wait(5000);
    await  prompt.edit('Spamming email...');
    await wait(6700);
-   await  prompt.edit(`Selling their data to ${name} on facebook...`); // add emmojis later 
+   await  prompt.edit(`Selling their data to ${name} on facebook...`); // add emmojis later & text
   await   wait(3700);
   let embed = new Discord.MessageEmbed()
   .setDescription(`A Dangerous and very ORIGINAL HACKING of ${user ? hacked.username : hacked} is just completed`)
