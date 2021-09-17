@@ -177,7 +177,7 @@ const prompt = await message.channel.send(`Hacking ${user ? hacked.username : ha
      await  wait(3700);
      await  prompt.edit('Fetching dms');
      await  wait(3700);
-     await prompt.edit(`Listing most common words... **${words}**`);
+     await prompt.edit(`Listing most common words... **${word}**`);
      await  wait(2700);
      await  prompt.edit(`Injecting virus into discriminator #${hacked.discriminator}`);
     await  wait(3700);
