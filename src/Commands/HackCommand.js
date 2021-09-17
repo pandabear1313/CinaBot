@@ -197,7 +197,7 @@ const prompt = await message.channel.send(`Hacking ${user ? hacked.username : ha
    await  prompt.edit(`Selling their data to ${name} on facebook...`); // add emmojis later & text
   await   wait(3700);
   let embed = new Discord.MessageEmbed()
-  .setDescription(`A Dangerous and very ORIGINAL HACKING of ${user ? hacked.username : hacked} is just completed`)
+  .setDescription(`A Dangerous and very ORIGINAL HACKING of ${user ? hacked.username : hacked} is just completed  `)
   .setColor("#FF0000")
   await prompt.delete
    await  message.channel.send({ embeds: [embed] });
@@ -207,4 +207,3 @@ const prompt = await message.channel.send(`Hacking ${user ? hacked.username : ha
 })
 
 
-/* got to add more text and a hack vybe to the code to scare people */
