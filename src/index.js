@@ -12,6 +12,8 @@ client.on('ready', () => {
     process.setMaxListeners(0);
     console.log(`Client: Ready`);
     console.log(`Logged in: ${client.user.tag}`);
+
+    require('../src/Data/mongo') ()
        
     client.user.setStatus('Online');
     
