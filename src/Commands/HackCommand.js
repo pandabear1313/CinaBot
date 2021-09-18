@@ -147,9 +147,11 @@ const name = names[Math.floor(Math.random() * names.length)];
 
 
 module.exports = new Command({
-  name: "hack",
-  aliases: ["hax"],
+   name: "hack",
+  description: "Bot sends a fake hack script to scare the user",
+  permission: "SEND_MESSAGES",
   async run(message, args, client) {
+
     const hacked = message.mentions.users.first();
     const user = message.mentions.users.first();
     if(user == client.users.cache.get(message.author.id))

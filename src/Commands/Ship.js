@@ -4,6 +4,8 @@ const Command = require("../Structures/Command.js");
  
 module.exports = new Command({
     name: "ship",
+    description: "The bot would join two lovers names together <3",
+    permission: "SEND_MESSAGES",
 	async run(message, args, client) {
         
         if (!args[0]) return message.channel.send("You forgot to mention someone!")

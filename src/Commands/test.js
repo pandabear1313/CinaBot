@@ -8,15 +8,15 @@ module.exports = new Command({
         permission: "SEND_MESSAGES",
         aliases: [],
 
-        async run(message, args, client, prefix) {
+        async run(message, args, client) {
 
-    if(!message.content.startsWith(prefix)) return
-    if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply('you don\'t have permission to use this cmd')
+    if(!message.content.startsWith("!")) return  // also the bot prefix is in the config.json file
 
-    const newprefix = args[0]
-    if(!newprefix) return message.channel.send("please provide a new prefix!") 
-    if(newprefix.length > 5) return message.channel.send('This prefix is too long, you have max 5 caracters')
+    if(!message.member.permissions.has('ADMINISTRATOR')) return message.reply('you don\'t have permission to use this cmd');
 
+    const newprefix = args[1]
+    if(!newprefix) return message.channel.send("please provide a new prefix!");
+    if(newprefix.length > 5) return message.channel.send('This prefix is too long, you have max 5 characters');
 
     let data;
     try {
