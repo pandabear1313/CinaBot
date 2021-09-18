@@ -7,10 +7,21 @@ const Discord = require("discord.js");
 const fetch = require("node-fetch");
 
 module.exports = new Command({
-    name: "test",
+    name: "hentai",
     description: "",
     permission: "SEND_MESSAGES",
     async run(message, args, client) {
+
+
+         const embed4 = new Discord.MessageEmbed()
+            .setTitle('NSFW not allowed here')
+            .setDescription(
+                'Use NSFW commands in a NSFW marked channel (look in channel settings, dummy)'
+            )
+            .setImage('https://i.imgur.com/oe4iK5i.gif')
+        if (!message.channel.nsfw) return message.channel.send({embeds: [embed4]});
+
+           message.delete();
 
         fetch("https://api.waifu.pics/nsfw/waifu")
         .then(res => res.json())
@@ -23,13 +34,7 @@ module.exports = new Command({
             message.channel.send({embeds: [embed]});
         });
 
-        const embed4 = new Discord.MessageEmbed()
-            .setTitle('NSFW not allowed here')
-            .setDescription(
-                'Use NSFW commands in a NSFW marked channel (look in channel settings, dummy)'
-            )
-            .setImage('https://i.imgur.com/oe4iK5i.gif')
-        if (!message.channel.nsfw) return message.channel.send({embeds: [embed4]});
+        
         
 
 
