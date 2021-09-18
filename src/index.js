@@ -15,6 +15,7 @@ client.on('ready', () => {
 
     require('../src/Data/mongo') ()
        
+    const PrefixSchema = require('../src/Data/PrefixSchema');
     client.user.setStatus('Online');
     
     let i = 0;
@@ -24,8 +25,6 @@ client.on('ready', () => {
     ];
     client.user.setActivity(`${activities[i++ % activities.length]}`, { type: 'WATCHING' })}, 10000000  )
 
-
-    
-});
+    });
 
 client.start(config.token);

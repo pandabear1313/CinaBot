@@ -21,7 +21,7 @@ module.exports = new Command({
             .setImage('https://i.imgur.com/oe4iK5i.gif')
         if (!message.channel.nsfw) return message.channel.send({embeds: [embed4]});
 
-           message.delete();
+        
 
         fetch("https://api.waifu.pics/nsfw/waifu")
         .then(res => res.json())
