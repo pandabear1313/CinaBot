@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const PrefixSchema = mongoose.Schema({
+const PrefixSchema = mongoose.Schema({ //
     _id: {
         type: String,
         require: true

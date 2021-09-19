@@ -1,13 +1,21 @@
 /** @format */
 
 const Event = require("../Structures/Event.js");
+const PrefixSchema = require("../Data/PrefixSchema");
 
-module.exports = new Event("messageCreate", (client, message) => {
+module.exports = new Event("messageCreate", async (client, message) => {
 	if (message.author.bot) return;
 
-	if (!message.content.startsWith(client.prefix)) return;
+	// let prefix;
+	let data = await PrefixSchema.findOne({
+	  _id: message.guild.id
+	})
 
-	const args = message.content.substring(client.prefix.length).split(/ +/);
+	let prefix = data ? data.newPrefix : "!";
+
+	if (!message.content.startsWith(prefix)) return;
+
+	const args = message.content.substring(prefix.length).split(/ +/);
 
 	const command = client.commands.find(cmd => cmd.name == args[0]);
 
