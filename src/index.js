@@ -9,7 +9,7 @@ const config = require("./Data/config.json");
 const client = new Client();
 
 client.on('ready', () => {
-    process.setMaxListeners(0);
+    process.setMaxListeners(0); 
     console.log(`Client: Ready`);
     console.log(`Logged in: ${client.user.tag}`);
 
