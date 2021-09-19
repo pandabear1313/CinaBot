@@ -19,15 +19,13 @@ module.exports = new Command({
                 'Use NSFW commands in a NSFW marked channel (look in channel settings, dummy)'
             )
             .setImage('https://i.imgur.com/oe4iK5i.gif')
-        if (!message.channel.nsfw) return message.channel.send({embeds: [embed4]});
-
-        
+        if (!message.channel.nsfw) return message.channel.send({embeds: [embed4]}); 
 
         fetch("https://api.waifu.pics/nsfw/waifu")
         .then(res => res.json())
         .then(res => {
             const embed = new Discord.MessageEmbed()
-            .setAuthor(`${message.author.username} Here's your Waifu`, message.author.displayAvatarURL())
+            .setAuthor(`${message.author.username} Here's your hentai`, message.author.displayAvatarURL())
             .setColor(`RANDOM`)
             .setImage(res.url)
 
