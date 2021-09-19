@@ -1222,7 +1222,7 @@ exports.words = [
   "hebe",
   "hebes",
   "heeb",
-  "heebs",
+  "heebs", 
   "hells",
   "helvete",
   "henhouse",
