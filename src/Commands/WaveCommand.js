@@ -8,7 +8,7 @@ const fetch = require("node-fetch");
 
 module.exports = new Command({
     name: "wave",
-    description: "",
+    description: "The bot would send an anime gif waving at the person mention",
     permission: "SEND_MESSAGES",
     async run(message, args, client) {
 
