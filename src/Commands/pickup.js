@@ -10,7 +10,7 @@ const Discord = require("discord.js");
 
 module.exports = new Command({
 	name: "pickup",
-	description: "Hello!",
+	description: "The bot would send a pickup line to the person mentioned",
 	permission: "SEND_MESSAGES",
 	async run(message, args, client) {
     
