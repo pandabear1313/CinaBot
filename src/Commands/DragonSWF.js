@@ -8,7 +8,7 @@ const fetch = require("node-fetch");
 
 module.exports = new Command({
     name: "hentai",
-    description: "",
+    description: "This command would send hentai only in NSFW channels",
     permission: "SEND_MESSAGES",
     async run(message, args, client) {
 
