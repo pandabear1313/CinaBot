@@ -12,10 +12,14 @@ module.exports = new Command({
 	permission: "SEND_MESSAGES",
 	async run(message, args, client) {
 
+        const sayContent = args.slice(1).join(" ");
+
+        if (!sayContent || !args[1])/* <--- both works*/ return message.channel.send(`<@${message.author.id}> Please send a message for me to predict your future :D`);
+
         if (!args[0]) return client.commands.get('help').execute(client, message, args, Discord)
         const n = Math.floor(Math.random() * eightBall.length)
         const embed = new Discord.MessageEmbed()
-        .setColor("#C64600")
+        .setColor("#00ff08")
         .setDescription(`:8ball: ${eightBall[n]}`)
         message.channel.send({ embeds: [embed] });
   
