@@ -4,7 +4,7 @@ const { eightBall } = require('../Data/pickup.json')
 
 const Command = require("../Structures/Command.js");
 
-const Discord = require("discord.js");
+const Discord = require("discord.js"); 
 
 module.exports = new Command({
 	name: "8ball",
