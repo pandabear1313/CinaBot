@@ -80,9 +80,6 @@
 
 
         "eightBall":
-
-
-
         [
         "according to me, yeah",
         "what the hell is wrong with you?",
@@ -116,14 +113,36 @@
         "yes",
         "no",
         "when i become a verified bot",
-        "when my discord server becomes partered"
-
-
-
-        ]
-
-
-
+        "when my discord server becomes partered",
+        "Maybe.",
+        "Certainly Not.",
+        "I hope so.",
+        "Not in your wildest dreams.",
+        "There is a good chance.",
+        "Quite likely.",
+        "I think so.",
+        "I hope so.",
+        "I hope not.",
+        "Never!",
+        "Fuhgeddaboudit",
+        "Ahaha! Really?",
+        "Pfft.",
+        "Sorry, bucko.",
+        "Hell, yeah!",
+        "Hell, yes.",
+        "Hell to the no.",
+        "The future is bleak.",
+        "The future is uncertain.",
+        "I would rather not say",
+        "Who cares?",
+        "Possibly.",
+        "Never, ever, ever.",
+        "There is a small chance.",
+        "Yes!",
+        "Y E S",
+        "Ähem, no..",
+        "No, straight up, no!"
+    ]
 
 }
     
