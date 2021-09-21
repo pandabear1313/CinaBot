@@ -1,8 +1,9 @@
 /** @format */
 
-const Command = require("../Structures/Command");
+const Command = require("../Structures/Command.js");
 
 const Discord = require("discord.js");
+
 
 const cap = require("capitalize-first-letter");
 
