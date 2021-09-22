@@ -13,6 +13,9 @@ module.exports = new Command({
     guildOnly: true,
 	async run(message, args, client) {
 
+        const sayContent = args.slice(1).join(" ");
+
+        if (!sayContent || !args[1])/* <--- both works*/ return message.channel.send(`<@${message.author.id}> Mention someone for me to check their dumbrate score`);
         let User = await message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(r => r.user.username.toLowerCase().includes() === args.join(' ').toLocaleLowerCase()) || message.guild.members.cache.find(r => r.displayName.toLowerCase().includes() === args.join(' ').toLocaleLowerCase())
         let gayrate = Math.floor(Math.random() * 101)
         let user =
