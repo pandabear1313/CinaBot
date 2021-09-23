@@ -6,7 +6,7 @@ const Command = require("../Structures/Command.js");
 const Discord = require("discord.js");
 
 module.exports = new Command({
-    name: "s",
+    name: "tweet",
     description: "Change status of BOT",
     permission: "SEND_MESSAGES",
 
