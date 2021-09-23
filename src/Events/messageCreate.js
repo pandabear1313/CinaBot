@@ -15,7 +15,7 @@ module.exports = new Event("messageCreate", async (client, message) => {
 
 	if (!message.content.startsWith(prefix)) return;
 
-	const args = message.content.substring(prefix.length).split(/ +/);
+	const args = message.content.trim().substring(prefix.length).split(/ +/);
 
 	const command = client.commands.find(cmd => cmd.name == args[0]);
 
