@@ -10,10 +10,30 @@ module.exports = new Command({
     permission: "SEND_MESSAGES",
 
     async run(message, args, client) {
+
 let user =
-            message.mentions.members.first() ||
-            message.guild.members.cache.get(args[0]) ||
-            message.member;
+message.mentions.members.first() ||
+message.guild.members.cache.get(args[0]) ||
+message.member;
+
+
+    const usageEmbed = new Discord.MessageEmbed()
+        .setAuthor(`${user.user.username} `, user.user.displayAvatarURL())
+        .setColor("#00FF1E")
+        .setTitle('Invaild Use of Command')
+        .addFields({
+            name: 'Command',
+            value: 'The Fire command allows you troll your friends by sending \nan attachment saying that the user is fired'
+        }, {
+            name: 'Command Useage',
+            value: 'Example `!fire` **@user**'
+        })
+        .setTimestamp()
+ 
+    const sayContent = args.slice(1).join(" ");
+ 
+    if (!sayContent) return message.channel.send({embeds: [usageEmbed]});
+
 
         const embed = new Discord.MessageEmbed();
         embed.setAuthor(`${user.user.username} you are fired`, user.user.displayAvatarURL())

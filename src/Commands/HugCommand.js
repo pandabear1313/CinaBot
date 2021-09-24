@@ -2,6 +2,8 @@ const axios = require('axios');
 
 const { MessageEmbed } = require('discord.js');
 
+const Discord = require("discord.js");
+
 const Command = require("../Structures/Command.js");
 
 module.exports = new Command({
@@ -10,7 +12,31 @@ module.exports = new Command({
     permission: "SEND_MESSAGES",
     async run(message, args, client) {
         const url = "https://some-random-api.ml/animu/hug";
-        const facts = "https://some-random-api.ml/facts/dog"
+
+        let user =
+        message.mentions.members.first() ||
+        message.guild.members.cache.get(args[0]) ||
+        message.member;
+
+
+    const usageEmbed = new Discord.MessageEmbed()
+        .setAuthor(`${user.user.username} `, user.user.displayAvatarURL())
+        .setColor("#00FF1E")
+        .setTitle('Invaild Use of Command')
+        .addFields({
+            name: 'Command',
+            value: 'The Hug command allows a user to sends an \nanimated gif hugging the user you pinged'
+        }, {
+            name: 'Command Useage',
+            value: 'Example `!hug` **@user**'
+        })
+        .setTimestamp()
+ 
+    const sayContent = args.slice(1).join(" ");
+ 
+    if (!sayContent) return message.channel.send({embeds: [usageEmbed]});
+
+
 
         let image, response;
         try {
@@ -20,10 +46,6 @@ module.exports = new Command({
         } catch (e) {
             return message.channel.send(`An error occured, please try again!`)
         }
-        let user =
-            message.mentions.members.first() ||
-            message.guild.members.cache.get(args[0]) ||
-            message.member;
 
         const embed = new MessageEmbed()
             .setAuthor(`${message.author.username} Hugged ${user.user.username}`, message.author.displayAvatarURL())

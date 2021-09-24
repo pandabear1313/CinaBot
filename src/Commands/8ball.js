@@ -10,7 +10,7 @@ const Discord = require("discord.js");
 
 module.exports = new Command({
     name: "8ball",
-    description: "",
+    description: "The bot predicts your future",
     permission: "SEND_MESSAGES",
     async run(message, args, client) {
 

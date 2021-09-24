@@ -6,16 +6,36 @@ const Discord = require("discord.js");
 
 module.exports = new Command({
     name: 'dumbrate',
-    description: 'Sends you your dumb rate',
+    description: 'Sends you your dumb rate score',
     usage: 'dumbrate [user]',
     category: 'Fun',
     permission: "SEND_MESSAGES",
     guildOnly: true,
 	async run(message, args, client) {
 
-        const sayContent = args.slice(1).join(" ");
+        let member =
+        message.mentions.members.first() ||
+        message.guild.members.cache.get(args[0]) ||
+        message.member;
+ 
+    const usageEmbed = new Discord.MessageEmbed()
+        .setAuthor(`${member.user.username} `, member.user.displayAvatarURL())
+        .setColor("#00FF1E")
+        .setTitle('Invaild Use of Command')
+        .addFields({
+            name: 'Command',
+            value: 'The dumbrate command check the pinged user\ndumb rate score out of 100%'
+        }, {
+            name: 'Command Useage',
+            value: 'Example `!dumbrate` **@user**'
+        })
+        .setTimestamp()
+ 
+    const sayContent = args.slice(1).join(" ");
+ 
+    if (!sayContent) return message.channel.send({embeds: [usageEmbed]});
 
-        if (!sayContent || !args[1])/* <--- both works*/ return message.channel.send(`<@${message.author.id}> Mention someone for me to check their dumbrate score`);
+
         let User = await message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(r => r.user.username.toLowerCase().includes() === args.join(' ').toLocaleLowerCase()) || message.guild.members.cache.find(r => r.displayName.toLowerCase().includes() === args.join(' ').toLocaleLowerCase())
         let gayrate = Math.floor(Math.random() * 101)
         let user =

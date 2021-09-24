@@ -16,7 +16,25 @@ module.exports = new Command({
         message.mentions.members.first() ||
         message.guild.members.cache.get(args[0]) ||
         message.member;
-        
+
+        const usageEmbed = new Discord.MessageEmbed()
+        .setAuthor(`${member.user.username} `, member.user.displayAvatarURL())
+        .setColor("#00FF1E")
+        .setTitle('Invaild Use of Command')
+        .addFields({
+            name: 'Command',
+            value: 'The Wave command send an anime gif waving at the person mention'
+        }, {
+            name: 'Command Useage',
+            value: 'Example `!wave` **@user**'
+        })
+        .setTimestamp()
+ 
+    const sayContent = args.slice(1).join(" ");
+ 
+    if (!sayContent) return message.channel.send({embeds: [usageEmbed]});
+
+
         fetch("https://api.waifu.pics/sfw/wave")
         .then(res => res.json())
         .then(res => {

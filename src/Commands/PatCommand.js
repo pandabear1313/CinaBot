@@ -11,6 +11,28 @@ module.exports = new Command({
     async run(message, args, client) {
         const url = "https://some-random-api.ml/animu/pat";
 
+        let user =
+            message.mentions.members.first() ||
+            message.guild.members.cache.get(args[0]) ||
+            message.member;
+ 
+    const usageEmbed = new Discord.MessageEmbed()
+        .setAuthor(`${user.user.username} `, user.user.displayAvatarURL())
+        .setColor("#00FF1E")
+        .setTitle('Invaild Use of Command')
+        .addFields({
+            name: 'Command',
+            value: 'The Pat command end a gif patting the mentioned user \nor could work on the author as-well'
+        }, {
+            name: 'Command Useage',
+            value: 'Example `!pat` **@user**'
+        })
+        .setTimestamp()
+ 
+    const sayContent = args.slice(1).join(" ");
+ 
+    if (!sayContent) return message.channel.send({embeds: [usageEmbed]});
+
         let image, response;
         try {
             response = await axios.get(url);
@@ -19,10 +41,7 @@ module.exports = new Command({
         } catch (e) {
             return message.channel.send(`An error occured, please try again!`)
         }
-        let user =
-            message.mentions.members.first() ||
-            message.guild.members.cache.get(args[0]) ||
-            message.member;
+
 
         const embed = new MessageEmbed()
             .setAuthor(`${message.author.username} Patted ${user.user.username}`, user.user.displayAvatarURL())
