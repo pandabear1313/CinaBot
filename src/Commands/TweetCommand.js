@@ -7,18 +7,29 @@ const Discord = require("discord.js");
 
 module.exports = new Command({
     name: "tweet",
-    description: "Change status of BOT",
+    description: "Make fake tweet to troll your friend",
     permission: "SEND_MESSAGES",
-
     async run(message, args, client) {
-        const text = args.slice(1).join(" ");
-        if (!text) return message.channel.send("Please provide a text to send! ;)");  // justin pro at code ;D future job for you is at microsoft tbf or apple 
-        let avatar = message.author.displayAvatarURL()
-
-        memer.tweet(avatar, message.author.username, text).then(image => {
-            const attachment = new MessageAttachment(image, "tweet.png")
-            
-            message.channel.send({ files: [attachment] })
-        })
-    }
-});
+      let user =
+        message.mentions.members.first() ||
+        message.guild.members.cache.get(args[0]) ||
+        message.member;
+  
+      const avatar = user.user.displayAvatarURL({ dynamic: false });
+  
+      const text = args.slice(1).join(" ");
+  
+      if (!text) return message.reply(`Please provide a text.`);
+  
+      const username = user.user.username;
+  
+      memer.tweet(avatar, username, text).then((image) => {
+        var attachment = new Discord.MessageAttachment(image, "tweet.png");
+        const embed = new Discord.MessageEmbed()
+          .setTitle("Tweeted!")
+          .setColor("#00FF1E")
+          .setImage("attachment://tweet.png");
+        message.channel.send({ embeds: [embed], files: [attachment] });
+      });
+    },
+  });
