@@ -14,21 +14,21 @@ module.exports = new Command({
         message.guild.members.cache.get(args[0]) ||
         message.member;
 
-        const report = new Discord.MessageEmbed()
+        const test = new Discord.MessageEmbed()
 
     .setAuthor(`${user.user.username} `, user.user.displayAvatarURL())
     .setColor("#00FF1E")
 	.setTitle('Invaild Use of Command')
     .addFields(
-        { name: 'Command', value: 'Say Command allows a user to send a message \nand bot would repeat that same message'},
+        { name: 'Command', value: '8ball Command generally predicts ones Future Events '},
 
-        { name: 'Command Useage', value: 'Example  `!say` Hello world' }
+        { name: 'Command Useage', value: 'Example  `!8ball` Does my gf loves me?' }
     )
     .setTimestamp()  
 
 
     
-    message.channel.send({ embeds: [report] });
+    message.channel.send({ embeds: [test] });
 
 
 
