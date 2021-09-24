@@ -18,7 +18,7 @@ module.exports = new Command({
         message.member;
 
         const usageEmbed = new Discord.MessageEmbed()
-        .setAuthor(`${member.user.username} `, member.user.displayAvatarURL())
+        .setAuthor(`${user.user.username} `, user.user.displayAvatarURL())
         .setColor("#00FF1E")
         .setTitle('Invaild Use of Command')
         .addFields({
