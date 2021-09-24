@@ -10,7 +10,7 @@ module.exports = new Command({
 
         async run(message, args, client) {
 
-    if(!message.member.permissions.has('ADMINISTRATOR')) return message.reply('you don\'t have permission to use this cmd');
+    if(!message.member.permissions.has('SEND_MESSAGES')) return message.reply('you don\'t have permission to use this cmd');
 
     const newprefix = args[1]
     if(!newprefix) return message.channel.send("please provide a new prefix!");
