@@ -11,7 +11,7 @@ module.exports = new Command({
 
 	async run(message, args, client) {
 
-    const channel = client.channels.cache.get('882887842957783050');
+    const channel = client.channels.cache.get('891425124048326756');
     const query = args.join(" ");
     if(!query[0]) return messsage.reply("please specify a bug");
     const embed = new MessageEmbed()
