@@ -10,7 +10,7 @@ const { Collection } = require("mongoose");
 
 const Command = require("../Structures/Command.js");
 module.exports = new Command({
-	name: "f",
+	name: "help",
 	description: "Hello!",
 	permission: "SEND_MESSAGES",
 	async run(message, args, client) {
@@ -137,7 +137,7 @@ module.exports = new Command({
         let embed4 = new Discord.MessageEmbed()
 
         .setAuthor( user.user.username, user.user.displayAvatarURL())
-    .setColor("#00c8ff")
+    .setColor("#fcba03")
 	.setTitle('**Welcome** to the `Anime` section')
     .addFields(
         { name: 'Anime Page', value: '**Moderation** Commands are intentionally used to keep your server **Safe**'},
