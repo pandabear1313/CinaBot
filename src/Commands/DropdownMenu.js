@@ -23,26 +23,30 @@ module.exports = new Command({
             .addOptions([
                 {
                     label: "Information",
-                    description: "Click here to see option 1!",
-                    value: "first"
+                    description: "Click here to see all the Informative Commands",
+                    value: "first",
+                    emoji: "<a:check:890025594593628190>",
                   
                 },
                 {
                     label: "Fun",
-                    description: "Click here to see option 2!",
-                    value: "second"
+                    description: "Click here to see all the Cool/Fun Commands",
+                    value: "second",
+                    emoji: "<a:HappyPanda:848937481088663552>",
 
                 },
                 {
                     label: "Moderation",
-                    description: "Click here to see option 3!",
-                    value: "third"
+                    description: "Click here to get all the Moderation Commands",
+                    value: "third",
+                    emoji: "<:bot_mod:887130116273094656>",
                 },
                 {
                 
-                    label: "Anime",
-                    description: "Click here to see option 4!",
-                    value: "fourth"
+                    label: " Anime",
+                    description: "Click me if you want Anime Commands",
+                    value: "fourth",
+                    emoji: "<:anime:891343368456634448>",
             }
             ])
 
