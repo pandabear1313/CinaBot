@@ -142,7 +142,7 @@ module.exports = new Command({
     .addFields(
         { name: 'Anime Page', value: '**Anime** Commands are used to see cute waifus aswell sends super cute animated gifs to mentioned user'},
 
-        { name: 'Commands', value: '`wave` | `waifu` | `hug` | `pat` | `cuddle`'},
+        { name: 'Commands', value: '`wave` | `waifu` | `hug` | `pat` | `cuddle` | `animequote`'},
 
         { name: 'More Information ', value: 'For more **Information** please check out the `!helpinfo` Command'},
     )
