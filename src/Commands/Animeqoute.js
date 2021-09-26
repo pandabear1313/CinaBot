@@ -15,15 +15,15 @@ module.exports = new Command({
     message.mentions.members.first() ||
     message.guild.members.cache.get(args[0]) ||
     message.member;
-    
+
     const url = "https://animechan.vercel.app/api/random";
 
     axios.get(url).then((res) => {
       const embed = new Discord.MessageEmbed()
         .setTitle(`Anime Quote`)
         .addFields(
-            { name: 'Anime', value: res.data.character},
-            { name: 'Character', value: res.data.anime },
+            { name: 'Anime', value: res.data.anime}, 
+            { name: 'Character', value: res.data.character }, 
             { name: 'Quote', value: res.data.quote },
         )
 
