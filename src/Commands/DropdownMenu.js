@@ -91,7 +91,7 @@ module.exports = new Command({
         .addFields(
             { name: 'Information Page', value: '**Information** Commands generally show information \nabout the bot as well as show statistics on users'},
     
-            { name: 'Commands', value: '`ping` | `embed` | `userinfo` | `Botinfo` | `uptime` | `report` | `help` | `helpinfo`'},
+            { name: 'Commands', value: '`ping` | `embed` | `userinfo` | `Botinfo` | `uptime` | `report` | `help` | `helpinfo` |'},
     
             { name: 'More Information ', value: 'For more **Information** please check out the `!helpinfo` Command'},
         )
@@ -126,7 +126,7 @@ module.exports = new Command({
     
             { name: 'Commands', value: '`clear` | `setprefix`'},
     
-            { name: 'Built-in Events', value: '`Anti-Swear system` | `AI Chat` | `Mod-Logs`'},
+            { name: 'Built-in Events', value: '`Anti-Swear system` | `AI Chat` | `Mod-Logs |`'},
     
             { name: 'More Information ', value: 'For more **Information** please check out the `!helpinfo` Command'},
         )
@@ -142,7 +142,7 @@ module.exports = new Command({
     .addFields(
         { name: 'Anime Page', value: '**Anime** Commands are used to see cute waifus aswell sends super cute animated gifs to mentioned user'},
 
-        { name: 'Commands', value: '`wave` | `waifu` | `hug` | `pat` | `cuddle` | `animequote`'},
+        { name: 'Commands', value: '`wave` | `waifu` | `hug` | `pat` | `cuddle` | `animequote |`'},
 
         { name: 'More Information ', value: 'For more **Information** please check out the `!helpinfo` Command'},
     )
