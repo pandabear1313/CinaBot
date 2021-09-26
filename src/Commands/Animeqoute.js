@@ -9,6 +9,13 @@ module.exports = new Command({
   description: "",
   permission: "SEND_MESSAGES",
   async run(message, args, client) {
+
+    
+    let user =
+    message.mentions.members.first() ||
+    message.guild.members.cache.get(args[0]) ||
+    message.member;
+    
     const url = "https://animechan.vercel.app/api/random";
 
     axios.get(url).then((res) => {
