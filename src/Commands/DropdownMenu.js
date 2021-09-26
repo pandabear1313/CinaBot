@@ -108,7 +108,7 @@ module.exports = new Command({
     .addFields(
         { name: 'Fun Page', value: '**Fun** Commands are used to `Troll/ have a good time` with your friends'},
 
-        { name: 'Commands', value: '`meme` | `fire` | `say` | `status` | `hello` | `hug`  | `pat`  | `ttc`  | `dog`  | `cat` | `8ball` | `dumbrate` | `hack` | `pickup` | `reverse` | `rps` | `ship` | `tweet` | '},
+        { name: 'Commands', value: '`meme` | `fire` | `say` | `status` | `hello` | `ttc`  | `dog`  | `cat` | `8ball` | `dumbrate` | `hack` | `pickup` | `reverse` | `rps` | `ship` | `tweet` | '},
 
         { name: 'More Information ', value: 'For more **Information** please check out the `!helpinfo` Command'},
     )
@@ -140,7 +140,7 @@ module.exports = new Command({
     .setColor("#fcba03")
 	.setTitle('**Welcome** to the `Anime` section')
     .addFields(
-        { name: 'Anime Page', value: '**Moderation** Commands are intentionally used to keep your server **Safe**'},
+        { name: 'Anime Page', value: '**Anime** Commands are used to see cute waifus aswell sends super cute animated gifs to mentioned user'},
 
         { name: 'Commands', value: '`wave` | `waifu` | `hug` | `pat` | `cuddle`'},
 
