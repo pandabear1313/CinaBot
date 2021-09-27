@@ -13,7 +13,7 @@ module.exports = new Command({
 	async run(message, args, client) {
 
         let reminder = args.slice(1).join(' ');
-        let time = args(0);
+        let time = args[0]
 
         let user =
         message.mentions.members.first() ||
@@ -30,7 +30,7 @@ module.exports = new Command({
     .setFooter(`${user.user.username} `, user.user.displayAvatarURL())
     .setTimestamp()
 
-    if(!time) return message.channel.send({Embed: [noDurationEmbed]});
+    if(!time) return message.channel.send({ embeds: [noDurationEmbed]});
 
     const noReminderEmbed = new Discord.MessageEmbed();
 
@@ -42,7 +42,7 @@ module.exports = new Command({
     .setFooter(`${user.user.username} `, user.user.displayAvatarURL())
     .setTimestamp()
 
-    if(!reminder) return message.channel.send({Embed: [noReminderEmbed]});
+    if(!reminder) return message.channel.send({ embeds: [noReminderEmbed]});
 
     const reminderSetEmbed = new Discord.MessageEmbed()
 
@@ -50,13 +50,13 @@ module.exports = new Command({
 
     .setColor("BLURPLE")
     .setAuthor('Reminder was Set!', message.author.displayAvatarURL())
-    .setDescription(`Successfully set ${message.author.username}'s reminder!'`)
+    .setDescription(`Successfully set ${message.author.username}'s reminder!`)
     .addField('Remind In', `${time}`)
     .addField('Reminder', `${reminder}`)
     .setFooter(`${user.user.username} `, user.user.displayAvatarURL())
     .setTimestamp()
 
-    message.channel.send({Embed: [reminderSetEmbed]});
+    message.channel.send({ embeds: [reminderSetEmbed]});
 
     setTimeout(async function () {
 
@@ -72,7 +72,7 @@ module.exports = new Command({
         .setFooter(`${user.user.username} `, user.user.displayAvatarURL())
         .setTimestamp()
 
-        message.channel.send({Embed: [reminderAlertEmbed]});
+        message.channel.send({ embeds: [reminderAlertEmbed]});
 
     }, ms (time));
 
