@@ -24,7 +24,7 @@ module.exports = new Command({
             name: 'Command',
             value: 'The Pat command end a gif patting the mentioned user \nor could work on the author as-well'
         }, {
-            name: 'Command Useage',
+            name: 'Command Usage',
             value: 'Example `!pat` **@user**'
         })
         .setTimestamp()

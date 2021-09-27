@@ -27,7 +27,7 @@ module.exports = new Command({
                 name: 'Command',
                 value: '8ball Command generally predicts ones Future Events '
             }, {
-                name: 'Command Useage',
+                name: 'Command Usage',
                 value: 'Example  `!8ball` Does my gf loves me?'
             })
             .setTimestamp()

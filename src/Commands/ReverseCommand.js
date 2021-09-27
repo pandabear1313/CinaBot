@@ -22,7 +22,7 @@ module.exports = new Command({
             name: 'Command',
             value: 'The Reverse command generally reverse your text'
         }, {
-            name: 'Command Useage',
+            name: 'Command Usage',
             value: 'Example `!reverse` **text**'
         })
         .setTimestamp()

@@ -22,7 +22,7 @@ module.exports = new Command({
     .addFields(
         { name: 'Command', value: '8ball Command generally predicts ones Future Events '},
 
-        { name: 'Command Useage', value: 'Example  `!8ball` Does my gf loves me?' }
+        { name: 'Command Usage', value: 'Example  `!8ball` Does my gf loves me?' }
     )
     .setTimestamp()  
 

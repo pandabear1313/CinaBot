@@ -27,7 +27,7 @@ module.exports = new Command({
             name: 'Command',
             value: 'The Hug command allows a user to sends an \nanimated gif hugging the user you pinged'
         }, {
-            name: 'Command Useage',
+            name: 'Command Usage',
             value: 'Example `!hug` **@user**'
         })
         .setTimestamp()

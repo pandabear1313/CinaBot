@@ -26,7 +26,7 @@ module.exports = new Command({
             name: 'Command',
             value: 'The kiss command intentionally sends a cute \nkissing GIF to the person of choosing.'
         }, {
-            name: 'Command Useage',
+            name: 'Command Usage',
             value: 'Example `!kiss` **@user**.'
         })
         .setTimestamp()
