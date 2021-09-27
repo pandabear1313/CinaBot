@@ -12,7 +12,7 @@ module.exports = new Command({
 	permission: "SEND_MESSAGES",
 	async run(message, args, client) {
 
-        let reminder = args.slice(1).join(' ');
+        let reminder = args.slice(2).join(' ');
         let time = args[1]
 
         let user =
