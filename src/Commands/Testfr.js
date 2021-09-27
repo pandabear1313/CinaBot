@@ -13,7 +13,7 @@ module.exports = new Command({
 	async run(message, args, client) {
 
         let reminder = args.slice(1).join(' ');
-        let time = args[0]
+        let time = args[1]
 
         let user =
         message.mentions.members.first() ||
