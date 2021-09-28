@@ -91,7 +91,7 @@ module.exports = new Command({
         .addFields(
             { name: 'Information Page', value: '**Information** Commands generally show information \nabout the bot as well as show statistics on users'},
     
-            { name: 'Commands', value: '`ping` | `embed` | `userinfo` | `Botinfo` | `uptime` | `report` | `help` | `helpinfo`|'},
+            { name: 'Commands', value: '`ping` | `embed` | `userinfo` | `Botinfo` | `uptime` | `report` | `help` | `helpinfo`| `remind` | '},
     
             { name: 'More Information ', value: 'For more **Information** please check out the `!helpinfo` Command'},
         )
