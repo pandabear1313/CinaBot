@@ -64,7 +64,7 @@ module.exports = new Command({
                 .setFooter(`${user.user.username} `, user.user.displayAvatarURL())
                 .setTimestamp()
 
-            message.channel.send({ embeds: [reminderAlertEmbed]}).then(msg => deleteMessage(msg));
+            message.channel.send({ embeds: [reminderAlertEmbed]})
 
         }, ms(time));
     },
@@ -74,5 +74,6 @@ const deleteMessage = msg => {
     setTimeout(() => {
         msg.delete();
     }, 10_000)  
-} 
 
+
+} 
