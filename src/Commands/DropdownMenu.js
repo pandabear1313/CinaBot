@@ -126,7 +126,7 @@ module.exports = new Command({
     
             { name: 'Commands', value: '`clear` | `setprefix` | `dm` |'},
     
-            { name: 'Built-in Events', value: '`Anti-Swear system` | `AI Chat` | `Mod-Logs |`'},
+            { name: 'Built-in Events', value: '`Anti-Swear system` | `AI Chat` | `Mod-Logs` |'},
     
             { name: 'More Information ', value: 'For more **Information** please check out the `!helpinfo` Command'},
         )
