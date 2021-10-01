@@ -124,7 +124,7 @@ module.exports = new Command({
         .addFields(
             { name: 'Moderation Page', value: '**Moderation** Commands are intentionally used to keep your server **Safe**'},
     
-            { name: 'Commands', value: '`clear` | `setprefix`'},
+            { name: 'Commands', value: '`clear` | `setprefix` | `dm` |'},
     
             { name: 'Built-in Events', value: '`Anti-Swear system` | `AI Chat` | `Mod-Logs |`'},
     
