@@ -3,8 +3,8 @@
 const Command = require("../Structures/Command.js");
 
 module.exports = new Command({
-	name: "t",
-	description: "Hello!",
+	name: "dm",
+	description: "send a direct message to a user",
 	permission: "SEND_MESSAGES",
 	async run(message, args, client) {
 
@@ -22,3 +22,5 @@ message.delete()
 
     }
 });
+
+// got to redo
