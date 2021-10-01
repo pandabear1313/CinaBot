@@ -18,5 +18,7 @@ return message.channel.send("can't send an empty message");
 };
 user.send(astra);
 
+message.delete()
+
     }
 });
