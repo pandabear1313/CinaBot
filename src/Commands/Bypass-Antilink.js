@@ -9,47 +9,50 @@ module.exports = new Command({
     permission: "ADMINISTRATOR",
     async run(message, args, client) {
 
-        if (!args[1]) return message.channel.send({content: "Please give this command 'on / off'."});
+        const getDataAndUpdate = async isIgnored => {
+            await ChannelIgnoreSchema.findOneAndUpdate(
+            {
+                _id: message.guild.id
+            },
+            {
+                isIgnored: isIgnored
+            })
+            
+            message.channel.send({content: `The status is set to: ${status}`});
+        }
+
+        if (!args[1]) return message.channel.send({content: "Please give this command 'on / off / status'."});
         const status = args[1];
-        let data;
+        let data;  
 
         data = await ChannelIgnoreSchema.findOne({
-            _id: message.guildId
+            _id: message.guild.id
         })
-        // message.channel.send({content: `The status is now: ${data.isIgnored === true ? "on" : "off"}`});
+        
         if (!data) {
             let newData = await ChannelIgnoreSchema.create({
-                _id: message.guildId,
-                isIgnored: status
+                _id: message.guild.id
             })
             newData.save();
-        } else {
+        }// else {
             switch(args[1]) {
                 case 'on':
                     //code to turn the thing on
-                    message.channel.send({content: "on thingy"});
     
-                    await ChannelIgnoreSchema.findOneAndUpdate({
-                        _id: message.guild.id,
-                        isIgnored: true,
-                    })
+                    getDataAndUpdate(true);
                 break;
                 case 'off':
                     //code to turn the thing off
-                    message.channel.send({content: "off thingy"});
     
-                    await ChannelIgnoreSchema.findOneAndUpdate({
-                        _id: message.guild.id,
-                        isIgnored: false,
-                    })
-                break; 
-                default: 
-                    //a default message
-                    message.channel.send({content: "use 'on or off'."})
+                    getDataAndUpdate(false);
+                break;
+                case 'status':
+                    if (!data) return message.channel.send({content: "There was no data found ;)"});
+                    message.channel.send({content: `The status currently: ${data.isIgnored ? "on" : 'off'}`});
+                    break;
             }
-            
-        }
-        message.channel.send({content: `The status is set to: ${status}`});
-        console.log(data)
+        // }
     }
 });
+
+
