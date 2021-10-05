@@ -9,7 +9,7 @@ const ChannelIgnoreSchema = mongoose.Schema({
         type: Boolean,
         required: true,
         default: false
-    }
+    },
 });
 
 const model = mongoose.model("ChannelIgnore", ChannelIgnoreSchema);

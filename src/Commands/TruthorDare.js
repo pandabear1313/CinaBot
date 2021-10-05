@@ -51,7 +51,9 @@ module.exports = new Command({
         .setCustomId('Dare_user')
 
 
-    )
+    );
+
+
 
    message.channel.send({ embeds: [test], ephemeral: true, components: [row] });
 
