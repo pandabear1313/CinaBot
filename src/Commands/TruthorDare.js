@@ -5,7 +5,7 @@ const { MessageActionRow, MessageButton, MessageEmbed } = require("discord.js");
 const Discord = require('discord.js') 
 
 module.exports = new Command({
-	name: "t",
+	name: "tod",
 	description: "Hello!",
 	permission: "SEND_MESSAGES",
 	async run(message, args, client)  {

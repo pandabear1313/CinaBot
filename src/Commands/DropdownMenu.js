@@ -108,7 +108,7 @@ module.exports = new Command({
     .addFields(
         { name: 'Fun Page', value: '**Fun** Commands are used to `Troll/ have a good time` with your friends'},
 
-        { name: 'Commands', value: '`meme` | `fire` | `say` | `status` | `hello` | `ttc`  | `dog`  | `cat` | `8ball` | `dumbrate` | `hack` | `pickup` | `reverse` | `rps` | `ship` | `tweet` | '},
+        { name: 'Commands', value: '`meme` | `fire` | `say` | `status` | `hello` | `ttc`  | `dog`  | `cat` | `8ball` | `dumbrate` | `hack` | `pickup` | `reverse` | `rps` | `ship` | `tweet` | `tod` |'},
 
         { name: 'More Information ', value: 'For more **Information** please check out the `!helpinfo` Command'},
     )
