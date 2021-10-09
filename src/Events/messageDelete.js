@@ -2,7 +2,6 @@
 
 const Event = require("../Structures/Event.js");
 
-
 const Discord = require('discord.js');
 
 module.exports = new Event("messageDelete", (client, message) => {
@@ -11,13 +10,14 @@ module.exports = new Event("messageDelete", (client, message) => {
     message.mentions.members.first() ||
     message.member;
 
-
   const logChannel = message.guild.channels.cache.find(chnl => chnl.name === "mod-logs");
+
   if (!logChannel) return;
 
   try {
     if (message.member.bot) return;
-    if (!message.member.permissions.has("ADMINISTRATOR")) return;
+
+    if (!message.member.permissions.has('SEND_MESSAGES')) return;
 
     if (message.content.startsWith("https://")) return; 
 
@@ -28,8 +28,7 @@ module.exports = new Event("messageDelete", (client, message) => {
   .setTitle("Message Was Deleted")
   .setDescription(`**Channel**\n${message.channel}\n\n**Username**\n${message.author}\n\n**Message**\n${message}`)
   .setTimestamp()
-  .setThumbnail()
-  
+
   logChannel.send({ embeds: [messageDelete] });
 
 } catch (err) {

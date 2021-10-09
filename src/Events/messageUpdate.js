@@ -12,7 +12,7 @@ module.exports = new Event("messageUpdate", (client, oldMessage, newMessage) => 
 
 try {
  if (oldMessage.member.bot) return;
- if (!oldMessage.member.permissions.has("ADMINISTRATOR")) return; 
+ if (!oldMessage.member.permissions.has("SEND_MESSAGES")) return; 
  
  if (oldMessage.content.startsWith("https://")) return;   
  if (oldMessage.content.startsWith("http://")) return;
