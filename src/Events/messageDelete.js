@@ -45,4 +45,3 @@ module.exports = new Event("messageDelete", (client, message) => {
 
 })
 
-//.setDescription(`**Message**\n${message}\n\n**Channel**\n${message.channel}\n\n**Username**\n${message.author}`)
