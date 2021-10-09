@@ -14,8 +14,7 @@ module.exports = new Command({
         message.mentions.members.first() ||
         message.guild.members.cache.get(args[0]) ||
         message.member;
-
-       // let guildMember = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member
+        
         const Target = message.mentions.users.first() || message.author;
 
 
@@ -25,7 +24,6 @@ module.exports = new Command({
         .setAuthor(`${Target.tag}\'s Avatar`, user.user.displayAvatarURL())
         .setImage(Target.displayAvatarURL({dynamic: true, size: 512}))
         .setFooter(`Requested by ${message.author.username}`)
-       // .setDescription(`${guildMember.user}`)
         .setTimestamp()
 
         message.channel.send({ embeds: [responseEmbed] })
