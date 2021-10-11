@@ -4,12 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="180c0126-124b-4ef1-b275-90cdf727b937" name="Changes" comment="updated" />
+    <list default="true" id="180c0126-124b-4ef1-b275-90cdf727b937" name="Changes" comment="Updated a few-stuff but there are some bugs with TruthorDare.js that Justin would help me fix later">
+      <change afterPath="$PROJECT_DIR$/src/Commands/Button-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <list id="4cdfb8fb-e576-4013-a174-662e07b6ab28" name="Changes by Justin" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -30,7 +43,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -47,6 +60,12 @@
       <workItem from="1633215195953" duration="431000" />
       <workItem from="1633215837755" duration="253000" />
       <workItem from="1633216260650" duration="41000" />
+      <workItem from="1633793654885" duration="91000" />
+      <workItem from="1633794969366" duration="391000" />
+      <workItem from="1633908622362" duration="449000" />
+      <workItem from="1633909138221" duration="4288000" />
+      <workItem from="1633914976402" duration="78000" />
+      <workItem from="1633915456427" duration="3590000" />
     </task>
     <task id="LOCAL-00001" summary="updated">
       <created>1633210625028</created>
@@ -55,7 +74,21 @@
       <option name="project" value="LOCAL" />
       <updated>1633210625028</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fixed the issue with Failed Interaction">
+      <created>1633910414773</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1633910414773</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Updated a few-stuff but there are some bugs with TruthorDare.js that Justin would help me fix later">
+      <created>1633919026713</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1633919026713</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -75,7 +108,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated" />
+    <MESSAGE value="Fixed the issue with Failed Interaction" />
+    <MESSAGE value="Updated a few stuff but there are some bugs with TruthorDare.js that Justin would help me fix later" />
+    <MESSAGE value="Updated a few-stuff but there are some bugs with TruthorDare.js that Justin would help me fix later" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated a few-stuff but there are some bugs with TruthorDare.js that Justin would help me fix later" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
