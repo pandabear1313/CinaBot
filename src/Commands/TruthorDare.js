@@ -55,31 +55,41 @@ module.exports = new Command({
             " ", ephemeral:true, embeds : [embed],
         components:[row]})
 
+        fetch("https://api.truthordarebot.xyz/api/truth")
+            .then(resTruth => resTruth.json())
+            .then(resTruth => {
+
+                fetch("https://api.truthordarebot.xyz/api/dare")
+                    .then(restDare => restDare.json())
+                    .then(restDare => {
+
             const dareEmbed = new Discord.MessageEmbed()
 
                 .setAuthor(`${user.user.tag}`, user.user.displayAvatarURL())
                 .setColor("#00FF1E")
                 .setTitle(`${message.author.username} You've chosen Dare`)
-                .setDescription(`${message.author.username} **Here is your Dare** \n ${res.data.question}`)
+                .setDescription(`${message.author.username} **Here is your Dare** \n ${restDare.question}`)
                 .setTimestamp()
 
 
             const truthEmbed = new Discord.MessageEmbed()
 
                 .setAuthor(`${user.user.tag}`, user.user.displayAvatarURL())
-                .setColor("#00FF1E")
+                .setColor("#00ff37")
                 .setTitle(`${message.author.username} You've chosen Truth `)
-                .setDescription(`${message.author.username} **Here is your Truth** \n ${message.author}`)
+                .setDescription(`${message.author.username} **Here is your Truth** \n ${resTruth.question}`)
                 .setTimestamp()
 
-        fetch("https://api.truthordarebot.xyz/api/truth")
-            .then(res => res.json())
-            .then(res => {
-
+               const filter = (collect) => {
+                if(collect.user.id === message.author.id) return true;
+                return collect.reply({content: "You cant use this button!"})
+               }
                 const collector = message.channel.createMessageComponentCollector({
 
+                    filter,
+                    max: 2,
                     componentType: "BUTTON"
-                })
+                });
 
                 collector.on("collect", async (collected) => {
 
@@ -94,6 +104,9 @@ module.exports = new Command({
                         collected.reply({embeds: [truthEmbed]})
                     }
                 })
+
+
+            })
             })
     }
 });
