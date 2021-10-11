@@ -5,7 +5,7 @@ module.exports = new Event("messageCreate", async (client, message) => {
 
     if (message.author.bot) return;
 
-    // if (message.member.permissions.has('MANAGE_GUILD')) return;
+     if (message.member.permissions.has('MANAGE_GUILD')) return;
 
     const data = await ChannelIgnoreSchema.findOne({
         _id: message.guild.id
@@ -20,7 +20,7 @@ module.exports = new Event("messageCreate", async (client, message) => {
         }, 10_000)
     }
 
-    // for a odd reason i did that but deleted it its good man
+   
     const links = ['discord.gg/', 'discord.com/invite/', 'https://', 'discord.io/', 'youtube.com/'];
 
     for (const link of links) {
