@@ -80,18 +80,21 @@ module.exports = new Command({
                 .setDescription(`${message.author.username} **Here is your Truth** \n ${resTruth.question}`)
                 .setTimestamp()
 
-               const filter = (collect) => {
-                if(collect.user.id === message.author.id) return true;
-                return collect.reply({content: "You cant use this button!"})
-               }
-                const collector = message.channel.createMessageComponentCollector({
+                            const filter = (collect) => {
+                                if (collect.user.id === message.author.id) return true;
+                                collect.reply(`<@${collect.user.id}> You Can't Click this button!`)
+                                return false;
+                            }
+                            const collector = message.channel.createMessageComponentCollector({
 
-                    filter,
-                    max: 2,
-                    componentType: "BUTTON"
-                });
+                                filter,
+                                max: 2,
+                                componentType: "BUTTON"
 
-                collector.on("collect", async (collected) => {
+                            });
+
+                                collector.on("collect", async (collected) => {
+
 
                     const customId = collected.customId
 
@@ -110,4 +113,3 @@ module.exports = new Command({
             })
     }
 });
-
