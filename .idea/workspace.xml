@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="180c0126-124b-4ef1-b275-90cdf727b937" name="Changes" comment="Pushed a few Stuff">
+    <list default="true" id="180c0126-124b-4ef1-b275-90cdf727b937" name="Changes" comment="TruthorDare.js works now! and TweetCommand.js api is down">
+      <change afterPath="$PROJECT_DIR$/src/Commands/yt-together.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/TruthorDare.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/TruthorDare.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/DmCommand.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/DmCommand.js" afterDir="false" />
     </list>
     <list id="8cb05133-2ff0-4531-9e12-c466bed70c0d" name="Changes by infoj" comment="">
       <change beforePath="$PROJECT_DIR$/src/Commands/TruthorDare.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/TruthorDare.js" afterDir="false" />
     </list>
-    <list id="4cdfb8fb-e576-4013-a174-662e07b6ab28" name="Changes by Justin" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,22 +26,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/Commands/TruthorDare.js">
-      <ranges>
-        <range start1="57" end1="57" start2="57" end2="65" changelist="180c0126-124b-4ef1-b275-90cdf727b937" />
-        <range start1="62" end1="63" start2="70" end2="71" changelist="180c0126-124b-4ef1-b275-90cdf727b937" />
-        <range start1="69" end1="70" start2="77" end2="78" changelist="180c0126-124b-4ef1-b275-90cdf727b937" />
-        <range start1="71" end1="72" start2="79" end2="80" changelist="180c0126-124b-4ef1-b275-90cdf727b937" />
-        <range start1="74" end1="78" start2="82" end2="86" changelist="180c0126-124b-4ef1-b275-90cdf727b937" />
-        <range start1="80" end1="80" start2="88" end2="90" changelist="180c0126-124b-4ef1-b275-90cdf727b937" />
-        <range start1="81" end1="82" start2="91" end2="92" changelist="180c0126-124b-4ef1-b275-90cdf727b937" />
-        <range start1="88" end1="89" start2="98" end2="99" changelist="8cb05133-2ff0-4531-9e12-c466bed70c0d" />
-        <range start1="93" end1="94" start2="103" end2="104" changelist="8cb05133-2ff0-4531-9e12-c466bed70c0d" />
-        <range start1="96" end1="96" start2="106" end2="109" changelist="180c0126-124b-4ef1-b275-90cdf727b937" />
-      </ranges>
-    </file>
   </component>
   <component name="ProjectId" id="1yxzeoSy071VEYuSWBjmsqA1GPe" />
   <component name="ProjectViewState">
@@ -59,7 +43,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="CodeWithMe" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -84,7 +68,17 @@
       <workItem from="1633915456427" duration="6073000" />
       <workItem from="1633975584398" duration="1121000" />
       <workItem from="1633977551968" duration="176000" />
-      <workItem from="1633983082272" duration="3255000" />
+      <workItem from="1633983082272" duration="9130000" />
+      <workItem from="1634000092102" duration="3011000" />
+      <workItem from="1634003451250" duration="447000" />
+      <workItem from="1634005014534" duration="94000" />
+      <workItem from="1634045329058" duration="14000" />
+      <workItem from="1634045769072" duration="939000" />
+      <workItem from="1634091565272" duration="1443000" />
+      <workItem from="1634154896976" duration="3063000" />
+      <workItem from="1634158160462" duration="3182000" />
+      <workItem from="1634170028725" duration="893000" />
+      <workItem from="1634179332097" duration="336000" />
     </task>
     <task id="LOCAL-00001" summary="updated">
       <created>1633210625028</created>
@@ -114,7 +108,21 @@
       <option name="project" value="LOCAL" />
       <updated>1633919178937</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Buttons work">
+      <created>1633986832457</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1633986832457</updated>
+    </task>
+    <task id="LOCAL-00006" summary="TruthorDare.js works now! and TweetCommand.js api is down">
+      <created>1634158588687</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1634158588687</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,7 +146,9 @@
     <MESSAGE value="Updated a few stuff but there are some bugs with TruthorDare.js that Justin would help me fix later" />
     <MESSAGE value="Updated a few-stuff but there are some bugs with TruthorDare.js that Justin would help me fix later" />
     <MESSAGE value="Pushed a few Stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pushed a few Stuff" />
+    <MESSAGE value="Buttons work" />
+    <MESSAGE value="TruthorDare.js works now! and TweetCommand.js api is down" />
+    <option name="LAST_COMMIT_MESSAGE" value="TruthorDare.js works now! and TweetCommand.js api is down" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
