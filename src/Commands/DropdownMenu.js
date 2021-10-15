@@ -58,33 +58,30 @@ module.exports = new Command({
         message.member;
 
 
-        let embed = new Discord.MessageEmbed()
+            let embed = new Discord.MessageEmbed()
 
-        embed
-        
-        .setAuthor( user.user.username, user.user.displayAvatarURL())
-        .setColor("#00FF1E")
-        .setTitle('CinaBot Help Info Page')
-        .addFields(
-            { name: 'Information', value: 'Welcome to** CinnaBot** help info page where you can find \nall the available commands that the bot could perform.'},
-    
-            { name: 'More Info', value: 'For More Information about **each** command \ntry using the `!helpinfo` Command'},
-    
-            { name: 'Default Prefix', value: '`!help`'},
-        )
-        .setTimestamp() 
-        .setThumbnail(user.user.displayAvatarURL())
-        .setImage("")
+            embed
+
+            .setAuthor( user.user.username, user.user.displayAvatarURL())
+            .setColor("#00FF1E")
+            .setTitle('CinaBot Help Info Page')
+            .addFields(
+                { name: 'Information', value: 'Welcome to** CinnaBot** help info page where you can find \nall the available commands that the bot could perform.'},
+
+                { name: 'More Info', value: 'For More Information about **each** command \ntry using the `!helpinfo` Command'},
+
+                { name: 'Default Prefix', value: '`!help`'},
+            )
+            .setTimestamp()
+            .setThumbnail(user.user.displayAvatarURL())
+            .setImage("")
 
         let sendmsg = await message.channel.send({content : 
             " ", ephemeral:true, embeds : [embed], 
         components:[row]})
 
-
-
         let embed1 = new Discord.MessageEmbed()
 
-        
         .setAuthor( user.user.username, user.user.displayAvatarURL())
         .setColor("#00FF1E")
         .setTitle('**Welcome** to the `Information` section')
@@ -101,20 +98,19 @@ module.exports = new Command({
 
         let embed2 = new Discord.MessageEmbed()
 
-        
-    .setAuthor( user.user.username, user.user.displayAvatarURL())
-    .setColor("#ff9100")
-	.setTitle('**Welcome** to the `Fun` section')
-    .addFields(
+        .setAuthor( user.user.username, user.user.displayAvatarURL())
+        .setColor("#ff9100")
+        .setTitle('**Welcome** to the `Fun` section')
+        .addFields(
         { name: 'Fun Page', value: '**Fun** Commands are used to `Troll/ have a good time` with your friends'},
 
         { name: 'Commands', value: '`meme` | `fire` | `say` | `status` | `hello` | `ttc`  | `dog`  | `cat` | `8ball` | `dumbrate` | `hack` | `pickup` | `reverse` | `rps` | `ship` | `tweet` | `tod` |'},
 
         { name: 'More Information ', value: 'For more **Information** please check out the `!helpinfo` Command'},
     )
-    .setTimestamp() 
-    .setThumbnail(user.user.displayAvatarURL())
-    .setImage("")
+        .setTimestamp()
+        .setThumbnail(user.user.displayAvatarURL())
+        .setImage("")
 
         let embed3 = new Discord.MessageEmbed()
 
@@ -137,18 +133,18 @@ module.exports = new Command({
         let embed4 = new Discord.MessageEmbed()
 
         .setAuthor( user.user.username, user.user.displayAvatarURL())
-    .setColor("#fcba03")
-	.setTitle('**Welcome** to the `Anime` section')
-    .addFields(
+        .setColor("#fcba03")
+        .setTitle('**Welcome** to the `Anime` section')
+        .addFields(
         { name: 'Anime Page', value: '**Anime** Commands are used to see cute waifus aswell sends super cute animated gifs to mentioned user'},
 
         { name: 'Commands', value: '`wave` | `waifu` | `hug` | `pat` | `cuddle` | `animequote` |'},
 
         { name: 'More Information ', value: 'For more **Information** please check out the `!helpinfo` Command'},
-    )
-    .setTimestamp() 
-    .setThumbnail(user.user.displayAvatarURL())
-    .setImage("https://images-ext-2.discordapp.net/external/sskROCVWvdzH22FvhDNg5dA7sNf467gFGmpCKR14yoU/https/media.discordapp.net/attachments/888599673550536797/891418141907890196/tumblr_1c5ad679719c1993e4664b6e7616ec01_445c52fc_500.gif?width=400&height=231")
+        )
+        .setTimestamp()
+        .setThumbnail(user.user.displayAvatarURL())
+        .setImage("https://images-ext-2.discordapp.net/external/sskROCVWvdzH22FvhDNg5dA7sNf467gFGmpCKR14yoU/https/media.discordapp.net/attachments/888599673550536797/891418141907890196/tumblr_1c5ad679719c1993e4664b6e7616ec01_445c52fc_500.gif?width=400&height=231")
 
 
      const collector = message.channel.createMessageComponentCollector({
@@ -158,23 +154,23 @@ module.exports = new Command({
 
      collector.on("collect", async (collected) => {
 
-        const value = collected.values[0]
+         const value = collected.values[0]
 
         if(value === "first") {
 
-            collected.reply({embeds:[embed1], ephemeral:true})
+           await collected.reply({embeds:[embed1], ephemeral:true})
         }
         if(value === "second") {
 
-            collected.reply({embeds:[embed2], ephemeral:true})
+            await collected.reply({embeds:[embed2], ephemeral:true})
         }
         if(value === "third") {
 
-            collected.reply({embeds:[embed3], ephemeral:true})
+            await  collected.reply({embeds:[embed3], ephemeral:true})
         }
         if(value === "fourth") {
 
-            collected.reply({embeds:[embed4], ephemeral:true})
+            await collected.reply({embeds:[embed4], ephemeral:true})
         }
      })
 

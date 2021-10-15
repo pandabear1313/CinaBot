@@ -7,7 +7,7 @@ const fetch = require("node-fetch");
 const Discord = require('discord.js');
 
 module.exports = new Command({
-	name: "d",
+	name: "tod",
 	description: "Truth or Dare!",
 	permission: "SEND_MESSAGES",
 	async run(message, args, client)  {

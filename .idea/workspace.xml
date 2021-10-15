@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="180c0126-124b-4ef1-b275-90cdf727b937" name="Changes" comment="TruthorDare.js works now! and TweetCommand.js api is down">
+    <list default="true" id="180c0126-124b-4ef1-b275-90cdf727b937" name="Changes" comment="Added a return message if a user had their dms off credit goes to Justin">
       <change afterPath="$PROJECT_DIR$/src/Commands/yt-together.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Commands/DmCommand.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/DmCommand.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/DropdownMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/DropdownMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Reminder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Reminder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/TruthorDare.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/TruthorDare.js" afterDir="false" />
     </list>
     <list id="8cb05133-2ff0-4531-9e12-c466bed70c0d" name="Changes by infoj" comment="">
       <change beforePath="$PROJECT_DIR$/src/Commands/TruthorDare.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/TruthorDare.js" afterDir="false" />
@@ -26,6 +29,31 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/Commands/TruthorDare.js">
+      <ranges>
+        <range start1="9" end1="10" start2="9" end2="10" changelist="180c0126-124b-4ef1-b275-90cdf727b937" />
+        <range start1="14" end1="18" start2="14" end2="18" changelist="8cb05133-2ff0-4531-9e12-c466bed70c0d" />
+        <range start1="19" end1="20" start2="19" end2="20" changelist="8cb05133-2ff0-4531-9e12-c466bed70c0d" />
+        <range start1="21" end1="26" start2="21" end2="29" changelist="8cb05133-2ff0-4531-9e12-c466bed70c0d" />
+        <range start1="27" end1="43" start2="30" end2="38" changelist="8cb05133-2ff0-4531-9e12-c466bed70c0d" />
+        <range start1="44" end1="50" start2="39" end2="44" changelist="8cb05133-2ff0-4531-9e12-c466bed70c0d" />
+        <range start1="51" end1="52" start2="45" end2="45" changelist="8cb05133-2ff0-4531-9e12-c466bed70c0d" />
+        <range start1="53" end1="56" start2="46" end2="57" changelist="8cb05133-2ff0-4531-9e12-c466bed70c0d" />
+        <range start1="57" end1="60" start2="58" end2="61" changelist="8cb05133-2ff0-4531-9e12-c466bed70c0d" />
+        <range start1="61" end1="64" start2="62" end2="65" changelist="8cb05133-2ff0-4531-9e12-c466bed70c0d" />
+        <range start1="65" end1="66" start2="66" end2="67" changelist="8cb05133-2ff0-4531-9e12-c466bed70c0d" />
+        <range start1="67" end1="72" start2="68" end2="75" changelist="8cb05133-2ff0-4531-9e12-c466bed70c0d" />
+        <range start1="73" end1="75" start2="76" end2="77" changelist="8cb05133-2ff0-4531-9e12-c466bed70c0d" />
+        <range start1="76" end1="81" start2="78" end2="85" changelist="8cb05133-2ff0-4531-9e12-c466bed70c0d" />
+        <range start1="98" end1="99" start2="102" end2="103" changelist="8cb05133-2ff0-4531-9e12-c466bed70c0d" />
+        <range start1="100" end1="103" start2="104" end2="107" changelist="8cb05133-2ff0-4531-9e12-c466bed70c0d" />
+        <range start1="104" end1="105" start2="108" end2="109" changelist="8cb05133-2ff0-4531-9e12-c466bed70c0d" />
+        <range start1="106" end1="110" start2="110" end2="114" changelist="8cb05133-2ff0-4531-9e12-c466bed70c0d" />
+        <range start1="111" end1="113" start2="115" end2="119" changelist="8cb05133-2ff0-4531-9e12-c466bed70c0d" />
+      </ranges>
+    </file>
   </component>
   <component name="ProjectId" id="1yxzeoSy071VEYuSWBjmsqA1GPe" />
   <component name="ProjectViewState">
@@ -78,7 +106,9 @@
       <workItem from="1634154896976" duration="3063000" />
       <workItem from="1634158160462" duration="3182000" />
       <workItem from="1634170028725" duration="893000" />
-      <workItem from="1634179332097" duration="336000" />
+      <workItem from="1634179332097" duration="1370000" />
+      <workItem from="1634223410707" duration="58000" />
+      <workItem from="1634265307940" duration="1796000" />
     </task>
     <task id="LOCAL-00001" summary="updated">
       <created>1633210625028</created>
@@ -122,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634158588687</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added a return message if a user had their dms off credit goes to Justin">
+      <created>1634179859983</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1634179859983</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,7 +185,8 @@
     <MESSAGE value="Pushed a few Stuff" />
     <MESSAGE value="Buttons work" />
     <MESSAGE value="TruthorDare.js works now! and TweetCommand.js api is down" />
-    <option name="LAST_COMMIT_MESSAGE" value="TruthorDare.js works now! and TweetCommand.js api is down" />
+    <MESSAGE value="Added a return message if a user had their dms off credit goes to Justin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a return message if a user had their dms off credit goes to Justin" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

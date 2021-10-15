@@ -29,7 +29,7 @@ module.exports = new Command({
             .setFooter(`${user.user.username} `, user.user.displayAvatarURL())
             .setTimestamp()
 
-        if(!time) return message.channel.send({ embeds: [noDurationEmbed]});
+        if(!time) return message.channel.send({ embeds: [noDurationEmbed]}).then(msg => deleteMessage(msg))
 
         const noReminderEmbed = new Discord.MessageEmbed()
             .setColor("DARK_RED")
@@ -66,7 +66,7 @@ module.exports = new Command({
 
             message.channel.send({ embeds: [reminderAlertEmbed]})
 
-        }, ms(time));
+        }, await ms(time));
     },
 });
 
