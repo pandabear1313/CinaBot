@@ -2,11 +2,7 @@
 
 const{MessageActionRow, MessageSelectMenu } = require('discord.js')
 
-const {MessageEmbed} = require('discord.js')
-
 const Discord = require("discord.js");
-
-const { Collection } = require("mongoose");
 
 const Command = require("../Structures/Command.js");
 module.exports = new Command({
