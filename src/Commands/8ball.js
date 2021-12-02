@@ -28,11 +28,13 @@ module.exports = new Command({
                 value: '8ball Command generally predicts ones Future Events '
             }, {
                 name: 'Command Usage',
-                value: 'Example  `!8ball` Does my gf loves me?'
+                value: 'Example  `!8ball` Should I Play Minecraft Today!'
             })
             .setTimestamp()
 
         const sayContent = args.slice(1).join(" ");
+        
+        // reminder to redo this file
 
         if (!sayContent) return message.channel.send({embeds: [usageEmbed]});
 
