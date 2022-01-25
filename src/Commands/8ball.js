@@ -54,5 +54,5 @@ module.exports = new Command({
         message.channel.send({
             embeds: [embed]
         });
-    }
+    } // test
 });
