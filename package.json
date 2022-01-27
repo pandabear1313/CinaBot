@@ -29,6 +29,7 @@
 		"nekos.life": "^2.0.7",
 		"node": "^16.6.1",
 		"node-fetch": "^2.6.2",
+		"popcat-wrapper": "^1.4.9",
 		"random": "^3.0.6",
 		"requires": "^1.0.2",
 		"simply-djs": "^2.0.2"

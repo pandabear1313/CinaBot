@@ -26,7 +26,7 @@ module.exports = new Command({
             name: 'Command',
             value: 'The dumbrate command check the pinged user\ndumb rate score out of 100%'
         }, {
-            name: 'Command Useage',
+            name: 'Command Usage',
             value: 'Example `!dumbrate` **@user**'
         })
         .setTimestamp()

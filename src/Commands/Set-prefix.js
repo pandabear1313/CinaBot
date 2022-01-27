@@ -24,14 +24,16 @@ module.exports = new Command({
         })
         if(!data) {
             let newdata = await PrefixSchema.create({
-                _id: message.guild.id,
-                newPrefix: newprefix
+                _id: message.guild.id
             })
             newdata.save()
         } else {
-            await PrefixSchema.findOneAndUpdate({
+            await PrefixSchema.findOneAndUpdate(
+            {
                 _id: message.guild.id,
-                newPrefix: newprefix,
+            },
+            {
+                newPrefix: newprefix
             })
         }
         message.channel.send(`The Prefix has Been set to ${newprefix}`)

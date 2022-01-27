@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 {
+=======
+{   
+>>>>>>> 1f9a171c0e711b9f4478fd8e81bd3a5e8ad8d7f2
 	"token" : "ODc2NjY5NzE4NjMzNzc1MjE0.YRncTA.SVHrS6GPV8rorPvEUqzonIXSxMc",
 	"prefix": "!",
 	"mongoPath": "mongodb+srv://Cinna:Cinna14@cinabot.pt6kl.mongodb.net/data?retryWrites=true&w=majority"
 
 
 }
+
+

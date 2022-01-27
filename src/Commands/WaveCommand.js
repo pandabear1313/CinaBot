@@ -25,7 +25,7 @@ module.exports = new Command({
             name: 'Command',
             value: 'The Wave command send an anime gif waving at the person mention'
         }, {
-            name: 'Command Useage',
+            name: 'Command Usage',
             value: 'Example `!wave` **@user**'
         })
         .setTimestamp()

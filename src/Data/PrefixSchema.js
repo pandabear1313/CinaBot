@@ -3,11 +3,12 @@ const mongoose = require('mongoose')
 const PrefixSchema = mongoose.Schema({ //
     _id: {
         type: String,
-        require: true
+        required: true
     },
     newPrefix: {
         type: String,
-        require: true
+        default: "?",
+        required: true
     }
 })
 
